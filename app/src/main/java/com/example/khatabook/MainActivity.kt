@@ -24,10 +24,11 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
-        bind = ActivitySecondBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        val toolbar = findViewById<Toolbar>(R.id.toolbar)
-        val mTitle = findViewById<TextView>(R.id.toolbar_title)
+        bind = ActivitySecondBinding.inflate(layoutInflater)
+
+        val toolbar = findViewById<Toolbar>(R.id.toolbar1)
+        val mTitle = findViewById<TextView>(R.id.toolbar_title1)
         setSupportActionBar(toolbar)
         mTitle.setText(toolbar.getTitle());
      getSupportActionBar()?.setDisplayShowTitleEnabled(false);

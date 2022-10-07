@@ -20,8 +20,8 @@ class Second_Activity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivitySecondBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        val toolbar = findViewById<Toolbar>(R.id.toolbar)
-        val mTitle = findViewById<TextView>(R.id.toolbar_title)
+        val toolbar = findViewById<Toolbar>(R.id.toolbar2)
+        val mTitle = findViewById<TextView>(R.id.toolbar_title2)
         setSupportActionBar(toolbar)
         mTitle.setText("Add Customer");
         getSupportActionBar()?.setDisplayShowTitleEnabled(false);
