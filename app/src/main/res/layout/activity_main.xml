@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawerLayout"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:background="#0453AF"
+        android:layout_height="?actionBarSize"
+        android:id="@+id/toolbar">
+
+
+        <ImageView
+            android:id="@+id/h"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/ic_baseline_menu_24"/>
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:textStyle="bold"
+            android:text="Khatabook"
+            android:textColor="@color/white"
+            android:layout_toEndOf="@id/h"
+
+            android:layout_height="wrap_content"
+            android:textSize="25dp"
+            />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_below="@id/toolbar"
+        android:background="#0453AF">
+
+
+        <RelativeLayout
+            android:id="@+id/white"
+            android:layout_width="match_parent"
+            android:layout_height="155dp"
+
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/button">
+<RelativeLayout
+    android:id="@+id/Money"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+
+
+            <TextView
+                android:id="@+id/MoneyGive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="40dp"
+                android:text="100"
+                android:textColor="#319A17"
+                android:textSize="32dp"
+                android:textStyle="bold">
+
+            </TextView>
+            <TextView
+                android:layout_below="@id/MoneyGive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="45dp"
+                android:text="You will Give"
+                android:textColor="#403F3F"
+                android:textSize="15dp"
+                >
+
+            </TextView>
+</RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="210dp"
+
+              >
+
+
+
+                <TextView
+                    android:id="@+id/MoneyGet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginTop="40dp"
+                    android:text="210"
+                    android:textColor="#BF1010"
+                    android:textSize="32dp"
+                    android:textStyle="bold">
+
+                </TextView>
+                <TextView
+                    android:layout_below="@id/MoneyGet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="53dp"
+                    android:text="You will Get"
+                    android:textColor="#403F3F"
+                    android:textSize="15dp"
+                    >
+
+                </TextView>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="120dp"
+                android:text="VIEW REPORT >"
+                android:textSize="16dp"
+                android:textColor="#062E73"/>
+
+
+
+        </RelativeLayout>
+
+
+
+
+
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/Mrecycle"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="227dp" />
+
+        <Button
+            android:id="@+id/addButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:backgroundTint="#1A386C"
+            android:text="Add Customer"
+            android:textSize="15dp">
+
+
+        </Button>
+
+
+
+</RelativeLayout>
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:id="@+id/navBar"
+        app:menu="@menu/nav_menu"
+        app:headerLayout="@layout/nav_header"
+
+        />
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

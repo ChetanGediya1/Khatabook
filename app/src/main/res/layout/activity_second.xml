@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Second_Activity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:background="#0453AF"
+        android:layout_height="?actionBarSize"
+        android:id="@+id/toolbar">
+
+
+        <ImageView
+            android:id="@+id/left"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_baseline_keyboard_backspace_24"/>
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:text="Add Customer"
+            android:textColor="@color/white"
+            android:layout_toEndOf="@id/h"
+
+            android:layout_height="wrap_content"
+            android:textSize="22dp"
+            />
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+
+<!--    <EditText-->
+<!--        android:id="@+id/edt_name"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:maxLength="20"-->
+<!--        android:hint="Name"-->
+<!--        android:layout_height="wrap_content" />-->
+
+<!--    <EditText-->
+<!--        android:hint="Contect"-->
+<!--        android:id="@+id/edt_mobile"-->
+<!--        android:layout_below="@id/edt_name"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:maxLength="10"-->
+
+<!--        android:layout_height="wrap_content" />-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/edt_bill"-->
+<!--        android:hint="Amout"-->
+<!--        android:layout_below="@id/edt_mobile"-->
+<!--        android:maxLength="10"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content" />-->
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/aa"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="30dp"
+        android:hint="Name"
+        app:counterMaxLength="20"
+        app:endIconMode="clear_text"
+        app:helperTextTextColor="#DA0707"
+        app:startIconDrawable="@drawable/ic_baseline_person_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="20" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/cc"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/aa"
+
+
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:hint="Mobile No"
+        app:prefixText="+91"
+        app:endIconMode="clear_text"
+        app:startIconDrawable="@drawable/ic_baseline_call_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_mobile"
+            android:layout_width="match_parent"
+            android:maxLength="10"
+            android:layout_height="wrap_content"
+            android:inputType="phone" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/ee"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cc"
+
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:hint="Amout"
+        app:endIconMode="clear_text"
+        app:startIconDrawable="@drawable/ic_baseline_currency_rupee_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_bill"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+
+            android:maxLength="8" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <TextView
+        android:id="@+id/btnCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:layout_marginLeft="85dp"
+        android:layout_below="@id/ee"
+        android:text="Cancel"/>
+
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_marginTop="15dp"
+        android:layout_width="wrap_content"
+        android:backgroundTint="#0453AF"
+        android:layout_marginLeft="210dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ee"
+        android:text="Add"/>
+</RelativeLayout>
