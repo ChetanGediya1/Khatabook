@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Second_Activity">
+    tools:context=".activity.Second_Activity">
 
 
     <androidx.appcompat.widget.Toolbar
@@ -93,7 +93,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="30dp"
         android:hint="Mobile No"
-        app:prefixText="+91"
+        app:prefixText="+91 "
         app:endIconMode="clear_text"
         app:startIconDrawable="@drawable/ic_baseline_call_24">
 
@@ -104,29 +104,7 @@
             android:layout_height="wrap_content"
             android:inputType="phone" />
     </com.google.android.material.textfield.TextInputLayout>
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/ee"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
 
-        android:layout_height="wrap_content"
-        android:layout_below="@id/cc"
-
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="30dp"
-        android:hint="Amout"
-        app:endIconMode="clear_text"
-        app:startIconDrawable="@drawable/ic_baseline_currency_rupee_24">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edt_bill"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="phone"
-
-            android:maxLength="8" />
-    </com.google.android.material.textfield.TextInputLayout>
 
 
 
@@ -135,10 +113,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
+
         android:textColor="@color/black"
         android:textSize="20dp"
         android:layout_marginLeft="85dp"
-        android:layout_below="@id/ee"
+        android:layout_below="@id/cc"
         android:text="Cancel"/>
 
 
@@ -149,6 +128,6 @@
         android:backgroundTint="#0453AF"
         android:layout_marginLeft="210dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/ee"
+        android:layout_below="@id/cc"
         android:text="Add"/>
 </RelativeLayout>

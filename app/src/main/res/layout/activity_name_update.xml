@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.NameUpdate">
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:background="#0453AF"
+        android:layout_height="?actionBarSize"
+        android:id="@+id/toolbar9">
+
+
+        <ImageView
+            android:id="@+id/left9"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_baseline_keyboard_backspace_24"/>
+
+        <TextView
+            android:id="@+id/toolbar_title9"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="35dp"
+            android:text="Entry Details"
+            android:textColor="@color/white"
+            android:layout_toEndOf="@id/h"
+            android:layout_height="wrap_content"
+            android:textSize="22dp" />
+
+    </androidx.appcompat.widget.Toolbar>
+    <RelativeLayout
+        android:id="@+id/blue_bac"
+        android:layout_below="@id/toolbar9"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="#0453AF">
+
+        <RelativeLayout
+            android:layout_width="365dp"
+            android:layout_height="130dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/button">
+
+
+            <TextView
+                android:id="@+id/SRemak"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="19dp"
+                android:text="Name"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/edtnames"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="23dp"
+                android:layout_marginRight="25dp"
+                android:textColor="#000000"
+                android:textSize="20dp" />
+
+
+            <TextView
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"
+                android:layout_centerInParent="true"
+                android:background="#F4F2F2" />
+
+            <TextView
+                android:id="@+id/SRun"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/line"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="19dp"
+                android:text="Contacts"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/edtcalls"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edtnames"
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="38dp"
+                android:layout_marginRight="25dp"
+                android:textColor="#000000"
+                android:textSize="20dp" />
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/buttonbac"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true">
+
+
+        <Button
+            android:id="@+id/btnnameEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:layout_marginStart="20dp"
+            android:backgroundTint="#093E07"
+            android:text="        Update | Delete       " />
+
+        <!--        <Button-->
+        <!--            android:id="@+id/btnDelete"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="55dp"-->
+        <!--            android:backgroundTint="#D61414"-->
+        <!--            android:text="      Delete      " />-->
+
+
+    </RelativeLayout>
+    <ImageView
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="95dp"
+        android:layout_marginTop="203dp"
+        android:src="@drawable/secure_logo" />
+
+    <TextView
+        android:layout_width="wrap_content"
+
+        android:layout_marginStart="155dp"
+        android:layout_marginTop="219dp"
+        android:layout_height="wrap_content"
+        android:text="100% Safe and Secure"
+        android:textColor="#093E07" />
+
+
+</RelativeLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.HistoryActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tra_text"
+        android:id="@+id/Mrecycle7">
+    </androidx.recyclerview.widget.RecyclerView>
+    <RelativeLayout
+        android:id="@+id/tra_text"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/toolbar7">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="25dp"
+            android:text="Date/Time" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:text="Remark" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="25dp"
+            android:text="You Gave | You Got" />
+
+
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:background="#0453AF"
+        android:layout_height="?actionBarSize"
+        android:id="@+id/toolbar7">
+
+
+        <ImageView
+            android:id="@+id/left7"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/ic_baseline_keyboard_backspace_24"/>
+
+
+
+        <TextView
+            android:id="@+id/toolbar_title7"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:textStyle="bold"
+            android:text="History"
+            android:textColor="@color/white"
+            android:layout_toEndOf="@id/h"
+
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            />
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+</RelativeLayout>

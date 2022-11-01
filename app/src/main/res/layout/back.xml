@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="140dp"
+    android:padding="5dp"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/txtApp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="Khatabook"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/messagetxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtApp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Do you want to exit app?"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/messagetxt"
+            android:gravity="center">
+
+
+            <Button
+                android:id="@+id/yes"
+                android:layout_width="75dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginRight="80dp"
+                android:background="@drawable/button"
+                android:text="yes"
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                android:textStyle="bold">
+
+            </Button>
+
+            <Button
+                android:id="@+id/no"
+                android:layout_width="75dp"
+                android:layout_height="35dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25dp"
+                android:layout_toEndOf="@id/yes"
+                android:background="@drawable/button"
+                android:backgroundTint="#FF9800"
+                android:text="NO"
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                android:textStyle="bold">
+
+            </Button>
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

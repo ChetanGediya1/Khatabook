@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Khatabook</string>
     <string name="app_back">Add Customer</string>
+    <string name="y">YES</string>
 </resources>
