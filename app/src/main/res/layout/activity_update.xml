@@ -29,19 +29,33 @@
             android:layout_toEndOf="@id/h"
             android:layout_height="wrap_content"
             android:textSize="22dp" />
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:id="@+id/btnCalling"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/ic_baseline_call_24" />
+        </RelativeLayout>
 
     </androidx.appcompat.widget.Toolbar>
+
 
     <RelativeLayout
         android:id="@+id/blue_bac"
         android:layout_below="@id/toolbar8"
         android:layout_width="match_parent"
-        android:layout_height="215dp"
+        android:layout_height="200dp"
         android:background="#0453AF">
 
         <RelativeLayout
             android:layout_width="365dp"
-            android:layout_height="195dp"
+            android:layout_height="180dp"
             android:layout_centerInParent="true"
             android:background="@drawable/button">
 
@@ -73,7 +87,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/SRemak"
-                android:layout_marginLeft="13dp"
+                android:layout_marginLeft="17dp"
                 android:layout_marginTop="3dp"
                 android:layout_toEndOf="@id/imageView"
                 android:text="12 oct 22 - 08:30 PM"
@@ -87,7 +101,7 @@
                 android:layout_alignParentEnd="true"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="19dp"
-                android:layout_marginRight="25dp"
+                android:layout_marginRight="20dp"
                 android:textColor="#000000"
                 android:textSize="20dp" />
 
@@ -96,7 +110,7 @@
                 android:id="@+id/line"
                 android:layout_width="match_parent"
                 android:layout_height="1.5dp"
-                android:layout_marginTop="70dp"
+                android:layout_marginTop="60dp"
                 android:background="#F4F2F2" />
 
             <TextView
@@ -105,7 +119,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/line"
                 android:layout_marginLeft="9dp"
-                android:layout_marginTop="23dp"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"
                 android:text="Running Balance"
                 android:textColor="@color/black"
                 android:textSize="14dp" />
@@ -117,8 +132,8 @@
                 android:layout_below="@id/edtTotal2"
                 android:layout_alignParentEnd="true"
                 android:layout_marginLeft="15dp"
-                android:layout_marginTop="45dp"
-                android:layout_marginRight="25dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginRight="20dp"
                 android:textColor="#000000"
                 android:textSize="20dp" />
 
@@ -126,7 +141,7 @@
                 android:id="@+id/line2"
                 android:layout_width="match_parent"
                 android:layout_height="1.5dp"
-                android:layout_marginTop="135dp"
+                android:layout_marginTop="120dp"
                 android:background="#F4F2F2" />
 
             <TextView
@@ -134,6 +149,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/line2"
+                android:textStyle="bold"
                 android:layout_marginLeft="9dp"
                 android:layout_marginTop="20dp"
                 android:text="Deatails"
@@ -148,7 +164,7 @@
                 android:layout_alignParentEnd="true"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="16dp"
-                android:layout_marginRight="25dp"
+                android:layout_marginRight="20dp"
                 android:textColor="#000000"
                 android:textSize="20dp" />
 

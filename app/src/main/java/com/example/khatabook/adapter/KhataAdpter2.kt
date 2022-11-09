@@ -8,17 +8,19 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.cardview.widget.CardView
-import androidx.core.content.ContextCompat.startActivity
 
 import androidx.recyclerview.widget.RecyclerView
 import com.example.khatabook.R
-import com.example.khatabook.activity.Second_Activity
 import com.example.khatabook.activity.UpdateActivity
 import com.example.khatabook.model.StatusModel2
-import com.example.khatabook.activity.UserActivity
 
 
-class KhataAdpter2 (var userActivity: Activity, val list2: ArrayList<StatusModel2>)
+class KhataAdpter2(
+    var userActivity: Activity,
+    val list2: ArrayList<StatusModel2>,
+    val Fname: String,
+    val Fcall: String
+)
     : RecyclerView.Adapter<KhataAdpter2.viewData2>()
 {
     class viewData2(itemView: View) :RecyclerView.ViewHolder(itemView) {
@@ -51,6 +53,9 @@ class KhataAdpter2 (var userActivity: Activity, val list2: ArrayList<StatusModel
             intent.putExtra("c1",statusModel.cus)
             intent.putExtra("c2",statusModel.date)
             intent.putExtra("c3",statusModel.time)
+            intent.putExtra("Fname",Fname)
+            intent.putExtra("Fcall",Fcall)
+
             if (list2[position].status.equals("0"))
             {
                 intent.putExtra("c4",list2[position].money)

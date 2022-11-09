@@ -5,7 +5,6 @@ import android.app.Dialog
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
@@ -30,7 +29,8 @@ class UserActivity : AppCompatActivity() {
     var list2 = arrayListOf<StatusModel2>()
     var userId = ""
 
-
+var Fname = ""
+    var Fcall = ""
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,8 +48,8 @@ class UserActivity : AppCompatActivity() {
 
         userId = intent.getStringExtra("user").toString()
         dbhelper2 = Database(this);
-        val Fname = intent.getStringExtra("a1")
-        val FCall = intent.getStringExtra("a2")
+         Fname = intent.getStringExtra("a1").toString()
+         Fcall = intent.getStringExtra("a2").toString()
 
         ti.setText(Fname)
         //payment
@@ -62,7 +62,7 @@ class UserActivity : AppCompatActivity() {
         bind.logoButton.setOnClickListener {
             intent = Intent(this,NameUpdate::class.java)
             intent.putExtra("Fname", Fname)
-            intent.putExtra("Fcall", FCall)
+            intent.putExtra("Fcall", Fcall)
             intent.putExtra("id",id)
             intent.putExtra("userId",userId)
 
@@ -71,7 +71,7 @@ class UserActivity : AppCompatActivity() {
 
         bind.btnCall.setOnClickListener {
             val intent = Intent(Intent.ACTION_CALL)
-            intent.data = Uri.parse("tel:+91$FCall")
+            intent.data = Uri.parse("tel:+91$Fcall")
            startActivity(intent)
         }
 //whatsapp
@@ -111,7 +111,7 @@ class UserActivity : AppCompatActivity() {
     }
 
     private fun setTransactionsList(list2: ArrayList<StatusModel2>) {
-        val statusAdpter = KhataAdpter2(this, list2)
+        val statusAdpter = KhataAdpter2(this, list2,Fname,Fcall)
         val ln = LinearLayoutManager(this)
         bind.Mrecycle2.layoutManager = ln
         bind.Mrecycle2.adapter = statusAdpter

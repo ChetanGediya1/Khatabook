@@ -3,6 +3,8 @@ package com.example.khatabook.activity
 import android.annotation.SuppressLint
 import android.app.AlertDialog
 import android.content.DialogInterface
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
@@ -27,7 +29,8 @@ class UpdateActivity : AppCompatActivity() {
     var Date = ""
     var Time = ""
     var Money0 = ""
-
+var Fname = ""
+    var Fcall = ""
 
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,7 +40,7 @@ class UpdateActivity : AppCompatActivity() {
         val toolbar = findViewById<Toolbar>(R.id.toolbar8)
         val mTitle = findViewById<TextView>(R.id.toolbar_title8)
         setSupportActionBar(toolbar)
-        mTitle.setText(toolbar.getTitle())
+        mTitle.setText("Entry Deatails")
         getSupportActionBar()?.setDisplayShowTitleEnabled(false);
         id = intent.getStringExtra("id") as String
         userId = intent.getStringExtra("userId") as String
@@ -45,16 +48,25 @@ class UpdateActivity : AppCompatActivity() {
         Customer = intent.getStringExtra("c1") as String
         Date = intent.getStringExtra("c2") as String
         Time = intent.getStringExtra("c3") as String
+        Fname = intent.getStringExtra("Fname") as String
+        Fcall = intent.getStringExtra("Fcall") as String
+
 
         Money0 = intent.getStringExtra("c4") as String
 
         bindings.Sdate.setText("$Date - $Time")
         bindings.edtDeatails.setText("$Customer")
         bindings.edtTotal2.setText("₹ $Money0")
+        bindings.SRemak.setText("$Fname")
 
         bindings.edtTotal.setText("₹ $Money0")
         bindings.btnEdit.setOnClickListener {
             updatadialog()
+        }
+        bindings.btnCalling.setOnClickListener {
+            val intent = Intent(Intent.ACTION_CALL)
+            intent.data = Uri.parse("tel:+91$Fcall")
+            startActivity(intent)
         }
 
         bindings.left8.setOnClickListener {

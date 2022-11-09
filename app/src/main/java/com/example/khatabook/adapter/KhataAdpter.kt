@@ -12,7 +12,7 @@ import com.example.khatabook.R
 import com.example.khatabook.activity.UserActivity
 import com.example.khatabook.model.StatusModel
 
-class KhataAdpter(val mContext: Activity, val list: ArrayList<StatusModel>)
+class KhataAdpter(private val mContext: Activity, private val list: ArrayList<StatusModel>)
     : RecyclerView.Adapter<KhataAdpter.viewData>()
 {
 
@@ -37,8 +37,6 @@ class KhataAdpter(val mContext: Activity, val list: ArrayList<StatusModel>)
             intent.putExtra("a1",list[position].name)
             intent.putExtra("a2",list[position].mobile)
             mContext.startActivity(intent)
-
-
         }
     }
 

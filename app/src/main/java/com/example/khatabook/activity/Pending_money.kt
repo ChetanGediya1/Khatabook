@@ -1,8 +1,6 @@
 package com.example.khatabook.activity
 
-import android.annotation.SuppressLint
 import android.app.DatePickerDialog
-import android.app.TimePickerDialog
 import android.content.Intent
 import android.icu.util.Calendar
 import androidx.appcompat.app.AppCompatActivity
@@ -12,10 +10,8 @@ import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.khatabook.Database
 import com.example.khatabook.R
-import com.example.khatabook.adapter.KhataAdpter
 import com.example.khatabook.adapter.KhataAdpter2
 import com.example.khatabook.databinding.ActivityPendingMoneyBinding
-import com.example.khatabook.model.StatusModel
 import com.example.khatabook.model.StatusModel2
 
 class Pending_money : AppCompatActivity(), DatePickerDialog.OnDateSetListener {
@@ -24,9 +20,9 @@ class Pending_money : AppCompatActivity(), DatePickerDialog.OnDateSetListener {
     var list3 = arrayListOf<StatusModel2>()
     var day = 0
     var month = 0
+    var Fname = ""
+    var Fcall = ""
     var year = 0
-
-
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -66,7 +62,7 @@ class Pending_money : AppCompatActivity(), DatePickerDialog.OnDateSetListener {
     }
 
     fun Rvsetup() {
-        val statusAdpter = KhataAdpter2(this, list3)
+        val statusAdpter = KhataAdpter2(this, list3, Fname, Fcall)
         val ln = LinearLayoutManager(this)
         binding.Mrecycle3.layoutManager = ln
         binding.Mrecycle3.adapter = statusAdpter
