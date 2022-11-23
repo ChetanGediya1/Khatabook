@@ -1,5 +1,6 @@
 package com.example.khatabook.activity
 
+import android.annotation.SuppressLint
 import android.app.DatePickerDialog
 import android.content.Intent
 import android.icu.util.Calendar
@@ -14,7 +15,7 @@ import com.example.khatabook.adapter.KhataAdpter2
 import com.example.khatabook.databinding.ActivityPendingMoneyBinding
 import com.example.khatabook.model.StatusModel2
 
-class Pending_money : AppCompatActivity(), DatePickerDialog.OnDateSetListener {
+class PendingMoney : AppCompatActivity(), DatePickerDialog.OnDateSetListener {
     lateinit var binding : ActivityPendingMoneyBinding
     lateinit var dbhelper3: Database
     var list3 = arrayListOf<StatusModel2>()
@@ -45,6 +46,7 @@ class Pending_money : AppCompatActivity(), DatePickerDialog.OnDateSetListener {
         }
 
     }
+    @SuppressLint("NewApi")
     private fun getDateTimeCalender(){
         val cal : Calendar = Calendar.getInstance()
         day = cal.get(Calendar.DAY_OF_MONTH)

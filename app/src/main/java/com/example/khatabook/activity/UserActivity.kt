@@ -42,8 +42,6 @@ var Fname = ""
         setSupportActionBar(tool)
         getSupportActionBar()?.setDisplayShowTitleEnabled(false)
 
-
-
         val ti = findViewById<TextView>(R.id.tooltitle)
 
         userId = intent.getStringExtra("user").toString()

@@ -29,7 +29,7 @@ class UpdateActivity : AppCompatActivity() {
     var Date = ""
     var Time = ""
     var Money0 = ""
-var Fname = ""
+    var Fname = ""
     var Fcall = ""
 
     @SuppressLint("SetTextI18n")
@@ -99,16 +99,23 @@ var Fname = ""
 
         btn_add1.setOnClickListener {
             val dbhelper = Database(this)
-            dbhelper.updatedata(
-                edt_cus1.text.toString(),
-                edt_ama1.text.toString(),
-                edt_date1.text.toString(),
-                edt_time1.text.toString(),
-                id,
-                userId
-            )
-            alertDialog.dismiss()
-            finish()
+            if (edt_ama1.text!!.isEmpty()){
+                edt_ama1.setError("Please enter the Amout")
+            }
+            else{
+                dbhelper.updatedata(
+                    edt_cus1.text.toString(),
+                    edt_ama1.text.toString(),
+                    edt_date1.text.toString(),
+                    edt_time1.text.toString(),
+                    id,
+                    userId
+                )
+                alertDialog.dismiss()
+                finish()
+
+            }
+
         }
 
         btn_delete.setOnClickListener {

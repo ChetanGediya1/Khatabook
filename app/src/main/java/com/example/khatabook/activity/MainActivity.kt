@@ -3,7 +3,9 @@ package com.example.khatabook.activity
 import android.annotation.SuppressLint
 import android.app.Dialog
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
+import android.provider.Settings
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
@@ -17,19 +19,24 @@ import com.example.khatabook.R
 import com.example.khatabook.model.StatusModel
 import com.example.khatabook.databinding.ActivityMainBinding
 import com.example.khatabook.model.StatusModel2
+import com.karumi.dexter.Dexter
+import com.karumi.dexter.MultiplePermissionsReport
+import com.karumi.dexter.PermissionToken
+import com.karumi.dexter.listener.PermissionRequest
+import com.karumi.dexter.listener.multi.MultiplePermissionsListener
 
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
-
+    var counter = 0
     private var list2 = arrayListOf<StatusModel2>()
     private lateinit var dbhelper: Database
-   private var list = arrayListOf<StatusModel>()
+    private var list = arrayListOf<StatusModel>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+        Permisson()
         val toolbar = findViewById<Toolbar>(R.id.toolbar1)
         val mTitle = findViewById<TextView>(R.id.toolbar_title1)
         setSupportActionBar(toolbar)
@@ -45,16 +52,43 @@ class MainActivity : AppCompatActivity() {
 
         }
         binding.btnHistory.setOnClickListener {
-           intent = Intent(this, HistoryActivity::class.java)
+            intent = Intent(this, HistoryActivity::class.java)
             startActivity(intent)
 
         }
         binding.help.setOnClickListener {
-            intent = Intent(this, Pending_money::class.java)
+            intent = Intent(this, PendingMoney::class.java)
             startActivity(intent)
 
         }
 
+    }
+
+    fun Permisson() {
+        Dexter.withContext(this).withPermissions(
+            android.Manifest.permission.CALL_PHONE
+        ).withListener(object : MultiplePermissionsListener {
+            override fun onPermissionsChecked(p0: MultiplePermissionsReport?) {
+                if (p0!!.areAllPermissionsGranted()) {
+
+                } else {
+                    Toast.makeText(this@MainActivity, "Premisson Denied", Toast.LENGTH_SHORT).show()
+                    val reqintent = Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS).apply {
+                        val uri = Uri.fromParts("package", packageName, null)
+                        data = uri
+                    }
+                    startActivity(reqintent)
+
+                }
+            }
+
+            override fun onPermissionRationaleShouldBeShown(
+                p0: MutableList<PermissionRequest>?,
+                p1: PermissionToken?
+            ) {
+                p1?.continuePermissionRequest()
+            }
+        }).check()
     }
 
     fun Rvsetup(list: ArrayList<StatusModel>) {
@@ -75,17 +109,12 @@ class MainActivity : AppCompatActivity() {
         var sumofgive = 0
         var sumgive2 = 0
         for (i in list2) {
-            if (i.status.equals("0"))
-            {
+            if (i.status.equals("0")) {
                 sumofgive += i.money.toInt()
 
-            } else if (i.status.equals("1"))
-            {
+            } else if (i.status.equals("1")) {
                 sumgive2 += i.money.toInt()
-
             }
-
-
 
 
         }
@@ -103,8 +132,7 @@ class MainActivity : AppCompatActivity() {
         val no = dialog.findViewById<Button>(R.id.no)
 
         yes.setOnClickListener {
-            this.finish()
-            dialog.onBackPressed()
+                this.finish()
         }
 
         no.setOnClickListener {

@@ -42,7 +42,7 @@ class KhataAdpter2(
 
     @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: viewData2, position: Int) {
-        holder.scus.text = list2[position].cus
+         holder.scus.text = list2[position].cus
         holder.Sdate.text = list2[position].date
         holder.Stime.text = list2[position].time
         holder.btnTranstion.setOnClickListener {
@@ -55,7 +55,6 @@ class KhataAdpter2(
             intent.putExtra("c3",statusModel.time)
             intent.putExtra("Fname",Fname)
             intent.putExtra("Fcall",Fcall)
-
             if (list2[position].status.equals("0"))
             {
                 intent.putExtra("c4",list2[position].money)

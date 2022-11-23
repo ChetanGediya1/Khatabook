@@ -44,7 +44,7 @@
         android:layout_marginTop="80dp"
         android:layout_marginEnd="20dp"
         android:hint="Customer Product"
-        app:counterMaxLength="20"
+        app:counterMaxLength="22"
         app:endIconMode="clear_text"
         app:helperTextTextColor="#DA0707"
         app:startIconDrawable="@drawable/ic_baseline_person_24">
@@ -53,7 +53,7 @@
             android:id="@+id/edt_cus"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:maxLength="20" />
+            android:maxLength="22" />
     </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/cc"
@@ -74,7 +74,6 @@ app:helperText="* Required"
             android:id="@+id/edt_ama"
             android:layout_width="match_parent"
             android:maxLength="6"
-            android:text="0"
             android:layout_height="wrap_content"
             android:inputType="phone" />
     </com.google.android.material.textfield.TextInputLayout>
